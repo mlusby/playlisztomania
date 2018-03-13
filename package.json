@@ -1,0 +1,126 @@
+{
+  "name": "startup-react-app",
+  "version": "0.0.1",
+  "description": "Basic example react app",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development node ./server.js",
+    "eslint": "eslint ./src ./cloud --color",
+    "prestart": "yarn run eslint",
+    "prebuild": "yarn run eslint",
+    "start": "yarn run build && cross-env NODE_ENV=production node ./server.js",
+    "build": "cross-env NODE_ENV=production webpack",
+    "test": "jest --coverage",
+    "test:auto": "jest --watchAll"
+  },
+  "keywords": [
+    "react",
+    "flux",
+    "ui-material",
+    "react-hot-reload",
+    "ecmascript6",
+    "unitest",
+    "code coverage",
+    "webpack v3",
+    "jest"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "~6.26.0",
+    "babel-core": "~6.26.0",
+    "babel-eslint": "~8.2.1",
+    "babel-jest": "~22.1.0",
+    "babel-loader": "~7.1.2",
+    "babel-plugin-transform-class-properties": "~6.24.1",
+    "babel-plugin-transform-decorators-legacy": "~1.3.4",
+    "babel-plugin-transform-object-rest-spread": "~6.26.0",
+    "babel-plugin-transform-runtime": "~6.23.0",
+    "babel-preset-env": "~1.6.1",
+    "babel-preset-react": "~6.24.1",
+    "clean-webpack-plugin": "~0.1.17",
+    "compression": "~1.7.1",
+    "cross-env": "~5.1.1",
+    "css-hot-loader": "~1.3.6",
+    "css-loader": "~0.28.9",
+    "del": "~3.0.0",
+    "env2": "~2.2.0",
+    "enzyme": "~3.3.0",
+    "enzyme-adapter-react-16": "~1.1.1",
+    "es6-shim": "~0.35.3",
+    "eslint": "~4.16.0",
+    "eslint-import-resolver-webpack": "~0.8.3",
+    "eslint-loader": "~1.9.0",
+    "eslint-plugin-babel": "~4.1.2",
+    "eslint-plugin-import": "~2.8.0",
+    "eslint-plugin-jsx-a11y": "~6.0.2",
+    "eslint-plugin-react": "~7.6.1",
+    "expect": "~22.1.0",
+    "express": "~4.16.2",
+    "extract-text-webpack-plugin": "~3.0.2",
+    "file-loader": "~1.1.5",
+    "html-webpack-harddisk-plugin": "~0.1.0",
+    "html-webpack-plugin": "~2.30.1",
+    "identity-obj-proxy": "~3.0.0",
+    "jest": "~22.1.4",
+    "node-sass": "~4.7.2",
+    "open-browser-webpack-plugin": "~0.0.5",
+    "postcss-apply": "~0.8.0",
+    "postcss-cssnext": "~3.1.0",
+    "postcss-import": "~11.0.0",
+    "postcss-loader": "~2.0.9",
+    "react-test-renderer": "~16.2.0",
+    "regenerator-runtime": "~0.11.1",
+    "sass-loader": "~6.0.1",
+    "style-loader": "~0.20.1",
+    "uglifyjs-webpack-plugin": "~1.1.2",
+    "url-loader": "~0.6.2",
+    "webpack": "~3.10.0",
+    "webpack-dev-middleware": "~2.0.4",
+    "webpack-hot-middleware": "~2.21.0"
+  },
+  "dependencies": {
+    "flux": "~3.1.3",
+    "immutable": "~3.8.2",
+    "material-ui": "~0.20.0",
+    "normalize.css": "~7.0.0",
+    "prop-types": "~15.6.0",
+    "react": "~16.2.0",
+    "react-dom": "~16.2.0",
+    "react-hot-loader": "~3.1.3",
+    "react-router-dom": "~4.2.2",
+    "react-tap-event-plugin": "~3.0.2"
+  },
+  "private": false,
+  "author": {
+    "name": "Jhonatan Villanueva",
+    "email": "jinvilaz@gmail.com"
+  },
+  "engines": {
+    "node": ">= 8.9.4"
+  },
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/jinvillaz/start_up_react_app.git"
+  },
+  "jest": {
+    "setupFiles": [
+      "raf/polyfill",
+      "<rootDir>/jest/setup.js"
+    ],
+    "collectCoverageFrom": [
+      "src/app/**/*.js",
+      "!src/app/**/*.spec.js"
+    ],
+    "moduleNameMapper": {
+      ".*\\.(css|scss|sass)$": "<rootDir>/jest/styleMock.js",
+      ".*\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/jest/assetMock.js"
+    },
+    "coverageThreshold": {
+      "global": {
+        "branches": 1,
+        "functions": 1,
+        "lines": 1,
+        "statements": 1
+      }
+    }
+  }
+}

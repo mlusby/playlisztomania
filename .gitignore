@@ -1,0 +1,26 @@
+# Node JS
+node_modules
+
+# Vim
+*.swp
+*.swo
+
+# Python
+*.pyc
+
+# Bundled JS
+public/js/bundle.js
+public/js/bundle.min.js
+public/js/bundle.min.js.map
+
+# CSS
+public/css/**/*.css
+
+# database persistence folders for dev
+data
+
+#Ingored any desktop setting
+./**/desktop.ini
+
+uploads/*
+!uploads/README.MD

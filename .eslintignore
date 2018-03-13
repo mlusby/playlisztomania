@@ -1,0 +1,7 @@
+assets/
+coverage/
+dist/
+jest/
+node_modules/
+webpack.config.js
+server.js
